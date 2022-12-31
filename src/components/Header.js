@@ -1,9 +1,9 @@
 export const Header = () => {
   return (
     <Header>
-        <h1>Task Tracker</h1>
+        hello
     </Header>
   )
 }
 
-export default Header;
+export default Header
