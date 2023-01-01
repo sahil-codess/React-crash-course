@@ -1,11 +1,12 @@
 import { IoMdTrash} from 'react-icons/io'
 
-export const Task = ({task, onDelete}) => {
+export const Task = ({task, onDelete, onToggle}) => {
   return (
-    <div className="task">
+    <div className={`task ${task.reminder ? 'reminder' : ''}`} onDoubleClick={() => onToggle(task.id)}>
         <h3>
             {task.text} <IoMdTrash style={{color: 'red', cursor: 'pointer'}}
-             onClick={() => onDelete(task.id)}/>
+             onClick={() => onDelete(task.id)}
+             />
         </h3>
         <p>{task.day}</p>
     </div>
